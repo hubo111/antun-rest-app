@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  tomcat:
+    max-threads: 1024
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/autun?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.hblg.bigdata.autun.mapper
+  type6-handlers-package: org.apache.ibatis.type.LocalDateTypeHandler
